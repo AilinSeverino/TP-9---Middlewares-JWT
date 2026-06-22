@@ -1,0 +1,21 @@
+{
+  "name": "tp-9---middlewares-jwt",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/AilinSeverino/TP-9---Middlewares-JWT#readme",
+  "bugs": {
+    "url": "https://github.com/AilinSeverino/TP-9---Middlewares-JWT/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AilinSeverino/TP-9---Middlewares-JWT.git"
+  },
+  "license": "ISC",
+  "author": "Ailin Severino y Valentina Elterman",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": " node index.js"
+  }
+}
