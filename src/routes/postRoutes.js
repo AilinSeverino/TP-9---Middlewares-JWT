@@ -1,6 +1,11 @@
 import { Router } from 'express';
-import publicacionesRoute from './api/publicaciones.js';
+import postController from '../controllers/postController.js'; // Tu controlador real
+import verificarToken from '../middlewares/authMiddleware.js';
+import { validarPublicacion } from '../middlewares/validacionDeDatos.js';
 
 const router = Router();
-router.use('/', publicacionesRoute);
+
+router.get('/', postController.getFeed); 
+router.post('/', verificarToken, validarPublicacion, postController.createPost);
+
 export default router;

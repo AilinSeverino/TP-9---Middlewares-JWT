@@ -7,7 +7,7 @@ const verificarToken = (req, res, next) => {
     if (!token) {
         return res.status(401).json({ error: 'Acceso denegado. Token no provisto.' });
     }
-
+    console.log("CLAVE EN MIDDLEWARE:", process.env.JWT_SECRET ? "Existe" : "Es UNDEFINED");
     try {
         const decoded = jwt.verify(token, process.env.JWT_SECRET);
         req.user = decoded; // { id, nombre_usuario }

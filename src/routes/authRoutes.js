@@ -1,8 +1,10 @@
 import { Router } from 'express';
-import registerRoute from './api/auth/register.js';
-import loginRoute from './api/auth/login.js';
+import authController from '../controllers/authController.js'; // Tu controlador real
+import { validarRegistro, validarLogIn } from '../middlewares/validacionDeDatos.js';
 
 const router = Router();
-router.use('/register', registerRoute);
-router.use('/login', loginRoute);
+
+router.post('/register', validarRegistro, authController.register);
+router.post('/login', validarLogIn, authController.login);
+
 export default router;
